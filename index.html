@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add your journey - Get started</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+</head>
+
+<body>
+    <header class="container-fluid gx-0 py-2 py-lg-3">
+        <div class="row  w-100">
+            <div class="d-flex justify-content-between align-items-center ">
+
+                <div class="ps-2 d-lg-none">
+                    <a href="#"><img src="images/header/menu-hamburger.svg" alt="Hamburger menu">
+                    </a>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <div class="ps-lg-3">
+                        <a href="#"><img class="logo" src="images/header/liftshare_logo.png" alt="Liftshare logo"></a>
+                    </div>
+                    <nav class="d-none d-lg-block ms-3">
+                        <ul class="d-flex list-unstyled m-0">
+                            <li><a class="text-decoration-none text-white" href="">Home</a></li>
+                            <li class="mx-3 align-items-center"><a
+                                    class="text-decoration-none text-white align-items-center" href="">My Journeys</a>
+                            </li>
+                            <li class="me-3"><a class="text-decoration-none text-white" href="">Messages</a></li>
+                            <li><a class="text-decoration-none text-white" href="">My teams</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <div class="pe-4 d-none d-lg-block">
+                        <button class="search">Quick search</button>
+                    </div>
+                    <div class="pe-2">
+                        <a href=""><img src="images/header/notification.svg" alt="Notification bell"></a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row" style="height: 100%;">
+            <form class="col-12 col-lg-4 px-5" action="" id="form">
+                <section class="journeystart mt-5 px-3 ">
+                    <div>
+                        <h1>Add your journey</h1>
+                        <p class="mb-4">Whether you're looking to Liftshare as a driver or a passenger, listing your
+                            journey
+                            is the best
+                            way
+                            to find a match.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="mb-3" for="start">Journey start</label>
+                        <input class="col-12" type="text" placeholder="e.g. Postcode, Street Name" name="start"
+                            id="start">
+                    </div>
+                    <div class="mb-4">
+                        <label class="mb-3" for="destination">Destination</label>
+                        <input class="col-12" type="text" placeholder="e.g. Postcode, Street Name" name="destination"
+                            id="destination">
+                    </div>
+                    <div class="checkbox-p">
+                        <input type="checkbox" name="roundtrip" id="roundtrip">
+                        <label for="roundtrip">This is a return journey (round trip)</label>
+                    </div>
+                </section>
+
+                <section class="details mt-5 px-3 ">
+                    <div class="mb-3">
+                        <h1 class="mb-4">Journey details</h1>
+                        <p class="mb-2">I'm travelling as a:</p>
+                        <div>
+                            <input class="form-check-input" type="radio" name="travelling" id="dop">
+                            <label class="ms-3" for="dop">Driver or passenger</label>
+                        </div>
+                        <div class="my-2">
+                            <input class="form-check-input" type="radio" name="travelling" id="driver">
+                            <label class="ms-3" for="driver">Driver</label>
+                        </div>
+                        <div>
+                            <input class="form-check-input" type="radio" name="travelling" id="passenger">
+                            <label class="ms-3" for="passenger">Passenger</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="mb-2">Journey frequency</p>
+                        <div>
+                            <input class="form-check-input" type="radio" name="frequency" id="regular">
+                            <label class="ms-3" for="regular">Regular</label>
+                        </div>
+                        <div class="my-2">
+                            <input class="form-check-input" type="radio" name="frequency" id="one-off">
+                            <label class="ms-3" for="one-off">One-off</label>
+                        </div>
+                        <div>
+                            <input class="form-check-input" type="radio" name="frequency" id="shift">
+                            <label class="ms-3" for="shift">Shift</label>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="schedule mt-5 px-3 ">
+                    <div class="mb-3">
+                        <h1 class="mb-4">Journey schedule</h1>
+                        <p class="mb-2">Select the days you want to travel</p>
+                        <div class="d-flex">
+                            <div>
+                                <input class="form-check-input" type="checkbox" name="mon" id="mon">
+                                <label for="mon">Mon</label>
+                            </div>
+                            <div class="mx-3">
+                                <input class="form-check-input" type="checkbox" name="tue" id="tue">
+                                <label for="tue">Tue</label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="checkbox" name="wed" id="wed">
+                                <label for="wed">Wed</label>
+                            </div>
+                            <div class="mx-3">
+                                <input class="form-check-input" type="checkbox" name="thu" id="thu">
+                                <label for="thu">Thu</label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="checkbox" name="fri" id="fri">
+                                <label for="fri">Fri</label>
+                            </div>
+                            <div class="mx-3">
+                                <input class="form-check-input" type="checkbox" name="sat" id="sat">
+                                <label for="sat">Sat</label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="checkbox" name="sun" id="sun">
+                                <label for="sun">Sun</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div class="">
+                            <div class="mb-4">
+                                <label class="mb-3" for="">Leaving time</label>
+                                <input class="col-12" type="time">
+                            </div>
+                            <div class="mb-5">
+                                <label class="mb-3" for="">Return time</label>
+                                <input class="col-12" type="time">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="mb-3" for="flexibility">Journey time flexibility</label>
+                            <select class="col-12" id="flexibility">
+                                <option value="">Exact time</option>
+                                <option value="dog">+/- 15 min</option>
+                                <option value="cat">+/- 30 min</option>
+                                <option value="hamster">+/- 1 hour</option>
+                                <option value="parrot">+/- 2 hours</option>
+                                <option value="spider">+/- 4 hours</option>
+                                <option value="goldfish">+/- 12 hours</option>
+                                <option value="goldfish">Any time</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                </section>
+
+                <div class="py-3 pe-5 footer d-flex col-12 col-lg-4">
+                    <input type="button" class="btn back" value="Back">
+                    <input type="button" class="btn next " value="Next">
+                    <button class="btn post" type="submit">Post journey</button>
+
+                </div>
+
+            </form>
+            <div id="map" class="col-8 d-none d-lg-block">
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=BFvHXWK7l61iLsN4ZruxQom0nztWyYEn"></script>
+    <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=BFvHXWK7l61iLsN4ZruxQom0nztWyYEn"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
